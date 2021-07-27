@@ -22,7 +22,6 @@ namespace HafızaOyunu_V2
             Properties.Resources.muz,
             Properties.Resources.çilek
 
-        };   //4x4
         Image[] resimler =
         {
             Properties.Resources.bow,
@@ -43,9 +42,6 @@ namespace HafızaOyunu_V2
             Properties.Resources.flintandsteel,
             Properties.Resources.goldenapple,
             Properties.Resources.trident
-        };   //6x6
-        int[] indeksler = { 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7 };   //4x4
-        int[] altiliyedili = { 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15, 16, 16, 17, 17 };//6x6
         int kökdinozor = 0, gehgehdino, gecici;
         int bulunan = 0, ilkindeks,sirası, ikincitik = 0;
         PictureBox ilkkutu;
@@ -101,8 +97,6 @@ namespace HafızaOyunu_V2
                 picture[pi].Image = Image.FromFile("C:\\Users\\galip\\OneDrive\\Resimler\\iii.png");
                 picture[pi].Name = "resim" + pi.ToString();
                 picture[pi].SetBounds(satır, sütun, 110, 110);//location ve size belirleme
-                this.Controls.Add(picture[pi]); // forma eklemesini yapar
-                picture[pi].SizeMode = PictureBoxSizeMode.StretchImage;  // resimleri kutucuğa doldurur
                 picture[pi].Click += picturebox_Click;
                 satır += 115;
                 sayac++;
